@@ -1,0 +1,33 @@
+header {
+    padding: 0.5em 5em;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 800px) {
+        & {
+            height: auto;
+            flex-direction: column;
+        }
+    }
+
+    & > .logo {
+        font-size: 1.6rem;
+        display: flex;
+    }
+
+    & > .nav-bar {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.2em;
+        gap: 1em;
+
+        & > :hover {
+            text-decoration: underline;
+            // color: white;
+        }
+    }
+}
