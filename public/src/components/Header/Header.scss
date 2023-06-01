@@ -19,11 +19,12 @@ header {
         display: flex;
     }
 
-    & > .nav-bar {
+    & > ul {
         display: flex;
         flex-direction: row;
         font-size: 1.2em;
         gap: 1em;
+        list-style: none;
 
         & > :hover {
             text-decoration: underline;

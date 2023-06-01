@@ -5,14 +5,11 @@ function Header() {
   return (
     <header>
       <div className="logo"><a href="#">Nepalese Clothing</a></div>
-      <div className='nav-bar'>
-        <a href="#" className="home">Home</a>
-        <a href="#" className="blogz">Blog</a>
-        <a href="#" className="about-us">About Us</a>
-        <a href="#" className="contact-us">Contact Us</a>
-      </div>
-
-      
+      <ul className="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About US</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
     </header>
   )
 }
