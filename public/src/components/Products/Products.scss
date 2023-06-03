@@ -1,20 +1,19 @@
 .products {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
     gap: 1em;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2em auto ;
+    
 
     & > .product {
-        width: calc(25% - 1em);
-        // border: .5px solid black;
-        padding: 1em;
+        width: calc(25% - 1.5em);
+        padding: .75em;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: white;
+        background-color: #add7fa;
         border-radius: 5px;
         box-shadow: -.5px -.5px 0px 0px rgba(0,0,0,0.2);
 
