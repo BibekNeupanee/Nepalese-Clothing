@@ -1,20 +1,18 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header/Header";
-import Products from "../components/Products/Products";
 import Footer from "../components/FooterTop/FooterTop";
 
-function Home() {
+function ContactUs() {
   useEffect(() => {
-    document.title = "Home";
+    document.title = 'Contact Us';
   }, []);
 
   return (
     <>
       <Header />
-      <Products />
       <Footer />
     </>
   );
 }
 
-export default Home;
+export default ContactUs;

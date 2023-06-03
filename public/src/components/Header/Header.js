@@ -1,17 +1,26 @@
-import React from 'react'
-import '../Header/Header.scss'
+import React from "react";
+import "../Header/Header.scss";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
-      <div className="logo"><a href="#">Nepalese Clothing</a></div>
+      <div className="logo">
+        <Link to={"/"}>Nepalese Clothing</Link>
+      </div>
       <ul className="navbar">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About US</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/about-us"}>About Us</Link>
+        </li>
+        <li>
+          <Link to={"/contact-us"}>Contact Us</Link>
+        </li>
       </ul>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

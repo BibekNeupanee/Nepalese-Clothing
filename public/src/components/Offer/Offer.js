@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Offer() {
-  return (
-    <section className='offer'></section>
-  )
+  return <section className="offer"></section>;
 }
 
-export default Offer
+export default Offer;
