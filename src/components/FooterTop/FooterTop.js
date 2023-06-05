@@ -1,6 +1,7 @@
 import React from "react";
 import "./FooterTop.scss";
 import { Link } from "react-router-dom";
+import FooterButtom from "../FooterBottom/FooterBottom";
 
 function Footer() {
   const contactUs = {
@@ -19,7 +20,7 @@ function Footer() {
       <ul>
         <li className="left-footer">
           <h1 className="logo">
-          <Link to={"/"}>Nepalese Clothing</Link>
+            <Link to={"/"}>Nepalese Clothing</Link>
           </h1>
           <h1 className="location">Thamel, Kathmandu, Nepal</h1>
         </li>
@@ -48,6 +49,7 @@ function Footer() {
           </ul>
         </li>
       </ul>
+      <FooterButtom />
     </footer>
   );
 }
