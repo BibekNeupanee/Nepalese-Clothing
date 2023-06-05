@@ -4,17 +4,6 @@ import { Link } from "react-router-dom";
 import FooterButtom from "../FooterBottom/FooterBottom";
 
 function Footer() {
-  const contactUs = {
-    Header: "Contact",
-    links: [
-      "+977-9851027016",
-      "+977-9851332735",
-      "+977-01-5917016",
-      "nepaleseclothing@outlook.com",
-      "nepaleseclothing98@gmail.com",
-    ],
-  };
-
   return (
     <footer>
       <ul>
@@ -41,11 +30,26 @@ function Footer() {
           </ul>
         </li>
         <li>
-          <h1>{contactUs.Header}</h1>
+          <h1>Contact</h1>
           <ul>
-            {contactUs.links.map((link, index) => (
-              <li key={index}>{link}</li>
-            ))}
+            <li className="contact">
+              <a href="https://wa.me/9851332735">+977-9851332735</a>
+            </li>
+            <li className="contact">
+              <a href="https://wa.me/9851027016">+977-9851027016</a>
+            </li>
+            <span>E-mail us at:</span>
+
+            <li>
+              <a href="mailto:nepaleseclothing@outlook.com">
+                nepaleseclothing@outlook.com
+              </a>
+            </li>
+            <li>
+              <a href="mailto:nepaleseclothing98@gmail.com">
+                nepaleseclothing98@gmail.com
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
