@@ -4,13 +4,14 @@ import Products from "../../components/Products/Products";
 import Footer from "../../components/FooterTop/FooterTop";
 import Carousel from "../../components/Carousel/Carousel";
 import '../Home/Home.scss'
+import FooterButtom from "../../components/FooterBottom/FooterBottom";
 
 function Home() {
   useEffect(() => {
     document.title = "Home";
   }, []);
 
-  const data = [
+  const sliderData = [
     {
       imgUrl:
         "https://sf2.mariefranceasia.com/wp-content/uploads/sites/7/2016/05/gettyimages-529862780-616x410.jpg",
@@ -41,10 +42,11 @@ function Home() {
     <>
       <Header />
       <div className="slider-container">
-        <Carousel data={data} />
+        <Carousel data={sliderData} />
       </div>
       <Products />
       <Footer />
+      <FooterButtom />
     </>
   );
 }

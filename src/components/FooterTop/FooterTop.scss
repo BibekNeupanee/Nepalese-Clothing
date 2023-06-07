@@ -1,10 +1,10 @@
-footer {
+.footer-top {
     display: flex;
     flex-direction: column;
     padding: 4em;
     background: #4169e1;
     border-radius: 8px 8px 0 0;
-    gap: 2em;
+    // gap: 2em;
     color: white;
 
     & > ul {
@@ -70,6 +70,14 @@ footer {
                     }
                 }
             }
+        }
+    }
+
+    & > .social {
+        display: flex;
+        gap: 1em;
+        & > a > img {
+            width: em;
         }
     }
 }
