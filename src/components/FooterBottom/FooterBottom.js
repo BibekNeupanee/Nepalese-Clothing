@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import "../FooterBottom/FooterBottom.scss";
 import facebook from "../../SVG/facebook.svg";
 import instagram from "../../SVG/instagram.svg";
@@ -13,7 +13,7 @@ function FooterButtom() {
         <a href="https://www.instagram.com/nepalese_clothing/">
           <img src={instagram} alt="Instagram" />
         </a>
-        https://goo.gl/maps/bLmR3erxAd6QHP3Z9
+        {/* https://goo.gl/maps/bLmR3erxAd6QHP3Z9 */}
       </div>
     </>
   );

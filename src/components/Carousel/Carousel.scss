@@ -1,0 +1,126 @@
+.slider {
+    --slide-duration: 2000ms;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    & > .controls {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+
+        & > .control {
+            width: 100px;
+            cursor: pointer;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            text-shadow: -1px 0px 5px rgba(0, 0, 0, 1);
+            font-size: 3rem;
+
+            &.previous {
+                justify-content: flex-start;
+            }
+
+            &.next {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    & > .slides {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+
+        & > .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+
+            &[data-previous-slide="true"] {
+                opacity: 1;
+                transform: translateX(-100%);
+            }
+
+            &[data-current-slide="true"] {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            &[data-next-slide="true"] {
+                opacity: 1;
+                transform: translateX(100%);
+            }
+
+            &.center,
+            &.left,
+            &.right {
+                transition: all var(--slide-duration);
+                opacity: 1;
+            }
+
+            &.center {
+                transform: translateX(0);
+            }
+
+            &.left {
+                transform: translateX(-100%);
+            }
+
+            &.right {
+                transform: translateX(100%);
+            }
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                object-fit: cover;
+            }
+
+            & > .text-container {
+                background: #fff9;
+                position: absolute;
+                padding: 1rem;
+                max-width: 50%;
+                bottom: 5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    & > .slide-pills {
+        z-index: 2;
+        position: absolute;
+        bottom: 1rem;
+        display: flex;
+        gap: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+
+        & > .slide-pill {
+            cursor: pointer;
+            font-size: 0.7em;
+            padding: 0.2rem 1rem;
+            background: #000;
+            color: #fff;
+            border-radius: 4px;
+            //transition: all var(--slide-duration);
+            pointer-events: none;
+
+            &.active {
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+}
