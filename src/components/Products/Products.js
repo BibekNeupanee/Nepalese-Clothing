@@ -36,15 +36,18 @@ function Products() {
   ];
 
   return (
-    <section className="products">
-      {products.map((product, i) => (
-        <a href="#" className="product" key={i}>
-          <img src={product.image} alt={product.category} />
-          <div className="category">{product.category}</div>
-          <div className="title">{product.title}</div>
-        </a>
-      ))}
-    </section>
+    <>
+      <h5>Popular Products</h5>
+      <section className="products">
+        {products.map((product, i) => (
+          <a href="#" className="product" key={i}>
+            <img src={product.image} alt={product.category} />
+            <div className="category">{product.category}</div>
+            <div className="title">{product.title}</div>
+          </a>
+        ))}
+      </section>
+    </>
   );
 }
 

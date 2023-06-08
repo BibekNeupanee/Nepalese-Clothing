@@ -14,10 +14,26 @@ a {
 
 body {
   padding: 0 15%;
+  position: relative;
+
   @media (max-width: 800px) {
     & {
       padding: 0 2em;
     }
   }
-  background-color: #c6e3fa;
+
+  &::before {
+    content: "";
+    background-image: url("../src/components/Images/watermark.jpeg ");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 35%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+  }
 }

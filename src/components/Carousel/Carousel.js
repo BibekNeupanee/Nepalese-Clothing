@@ -13,9 +13,13 @@ function Carousel({ data }) {
   const nextSlide = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       nextButton.current.click();
-    }, Math.max(getAnimationDuration(), 5000));
+    }, Math.max(5000));
+
+    return () => {
+      clearTimeout(timeout);
+    };
   });
 
   const getAnimationDuration = () =>

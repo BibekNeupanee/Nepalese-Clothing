@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import Products from "../../components/Products/Products";
 import Footer from "../../components/FooterTop/FooterTop";
 import Carousel from "../../components/Carousel/Carousel";
-import '../Home/Home.scss'
+import "../Home/Home.scss";
 import FooterButtom from "../../components/FooterBottom/FooterBottom";
 
 function Home() {
@@ -44,7 +44,9 @@ function Home() {
       <div className="slider-container">
         <Carousel data={sliderData} />
       </div>
-      <Products />
+      <main >
+        <Products />
+      </main>  
       <Footer />
       <FooterButtom />
     </>
