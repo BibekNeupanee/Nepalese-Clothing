@@ -34,21 +34,25 @@ function Footer() {
           <h1>Contact</h1>
           <ul>
             <li className="contact">
-              <a href="https://wa.me/9851332735">+977-9851332735</a>
+              <a href="https://wa.me/9851332735" target="_blank">
+                +977-9851332735
+              </a>
             </li>
             <li className="contact">
-              <a href="https://wa.me/9851027016">+977-9851027016</a>
+              <a href="https://wa.me/9851027016" target="_blank">
+                +977-9851027016
+              </a>
             </li>
             <span>E-mail us at:</span>
 
             <li>
-              <a href="mailto:nepaleseclothing@outlook.com">
+              <a href="mailto:nepaleseclothing@outlook.com" target="_blank">
                 nepaleseclothing@outlook.com
               </a>
             </li>
             <li>
-              <a href="mailto:nepaleseclothing98@gmail.com">
-                nepaleseclothing98@gmail.com
+              <a href="mailto:nepaleseclothing98@gmail.com" target="_blank">
+                nepaleseclothing95@gmail.com
               </a>
             </li>
           </ul>

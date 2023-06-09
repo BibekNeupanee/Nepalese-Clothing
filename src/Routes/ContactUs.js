@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/FooterTop/FooterTop";
-import Dir from "../components/GoogleMap/Dir";
+import Contact from "../components/Contact/Contact";
 
 function ContactUs() {
   useEffect(() => {
@@ -11,7 +11,7 @@ function ContactUs() {
   return (
     <>
       <Header />
-      <Dir />
+      <Contact />
       <Footer />
     </>
   );
