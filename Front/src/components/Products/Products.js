@@ -1,5 +1,6 @@
 import React from "react";
 import "../Products/Products.scss";
+import useFetch from "../../hooks/useFetch";
 
 function Products() {
   const products = [
@@ -35,6 +36,10 @@ function Products() {
     },
   ];
 
+  const fabrics = useFetch("http://localhost:3000/")?.fabric || [];
+
+  console.log(fabrics);
+
   return (
     <>
       <h5>Popular Products</h5>
@@ -42,7 +47,9 @@ function Products() {
         {products.map((product, i) => (
           <a href="#" className="product" key={i}>
             <img src={product.image} alt={product.category} />
-            <div className="category">{product.category}</div>
+            {fabrics.map((fabric) => (
+              <div className="category">{fabric.name}</div>
+            ))}
             <div className="title">{product.title}</div>
           </a>
         ))}
