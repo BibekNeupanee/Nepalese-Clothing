@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS Fabric;
+CREATE TABLE Fabric (
+     id INT PRIMARY KEY NOT NULL ,
+    name VARCHAR(2000)
+);
