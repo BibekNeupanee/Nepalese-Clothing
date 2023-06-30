@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const MeashurementPart = sequelize.define(
-    "MeasurementPart",
+  const Characteristics = sequelize.define(
+    "Characteristics",
     {
       name: {
         type: DataTypes.STRING,
@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
     },
-    { tableName: "MeasurementParts" }
+    { tableName: "Characteristics" }
   );
 
-  return MeashurementPart;
+  return Characteristics;
 };
