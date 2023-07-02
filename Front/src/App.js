@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import "../src/App.scss";
-import AboutUs from "./Routes/AboutUs";
-import ContactUs from "./Routes/ContactUs";
-import Home from "./Routes/Home/Home";
+import AboutUs from "./routes/AboutUs";
+import ContactUs from "./routes/ContactUs";
+import Home from "./routes/Home/Home";
 
 function App() {
   return (
