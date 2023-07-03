@@ -1,14 +1,15 @@
 form {
     display: flex;
+    align-items: center;
     gap: 1em;
 
-    span {
+    & > span {
         color: red;
     }
 
-    & > .text-area {
+    & > .input {
         border-radius: 65px;
-        padding-left: 0.5em;
+        padding: .5em 1em;
         width: 50%;
     }
 

@@ -12,15 +12,16 @@ function AddFabric({ onFormSubmit }) {
     reset,
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     reset({ name: "" });
-    insertFabric(data);
-    onFormSubmit(data);
+    const newFabric = await insertFabric(data);
+    console.log(newFabric.id);
+    onFormSubmit(newFabric);
   };
 
   return (
     <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("name", { required: true })} className="text-area" />
+      <input {...register("name", { required: true })} className="input" />
 
       {errors.name && <span>This field is required</span>}
 

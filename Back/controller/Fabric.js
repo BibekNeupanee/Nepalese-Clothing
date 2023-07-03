@@ -4,8 +4,8 @@ exports.getAllFabrics = async (req, res) => {
   return res.status(200).json({ fabric });
 };
 exports.insertFabric = async (req, res) => {
-  console.log(req.body);
   const { name } = req.body;
-  const fabric = Fabric.create({ name });
+  const fabric = await Fabric.create({ name });
+  console.log(fabric);
   return res.status(200).json({ fabric });
 };
