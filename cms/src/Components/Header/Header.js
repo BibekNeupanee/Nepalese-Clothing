@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -8,19 +9,19 @@ function Header() {
 
       <ul>
         <li>
-          <a href="#">Dashboard</a>
+          <Link to={"/"}>Dashboard</Link>
         </li>
         <li>
-          <a href="#">Products</a>
+          <Link to={"/fabrics"}>Products</Link>
         </li>
         <li>
-          <a href="#">Product Types</a>
+          <Link to={"/product-types"}>Products Types</Link>
         </li>
         <li>
-          <a href="#">Measurement</a>
+          <Link to={"/measurements"}>Measurements</Link>
         </li>
         <li>
-          <a href="#">Fabric</a>
+          <Link to={"/fabrics"}>Fabrics</Link>
         </li>
       </ul>
     </header>
