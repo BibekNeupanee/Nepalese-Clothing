@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    gap: 1em;
+
+    span {
+        color: red;
+    }
+
+    & > .text-area {
+        border-radius: 65px;
+        padding-left: 0.5em;
+        width: 50%;
+    }
+
+    & > .submit {
+        background-color: #008ce9;
+        color: white;
+        font-size: 16px;
+        padding: 0.5em 1.5em;
+        border: none;
+        border-radius: 65px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #45a049;
+        }
+    }
+}

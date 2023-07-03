@@ -1,8 +1,8 @@
 const express = require("express");
-const { getAllFabrics } = require("../controller/Fabric");
+const { getAllFabrics, insertFabric } = require("../controller/Fabric");
 const router = express.Router();
 
-router.route("/").get(getAllFabrics).post();
+router.route("/").get(getAllFabrics).post(insertFabric);
 
 router
   .route("/:id")
