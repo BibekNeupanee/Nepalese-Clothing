@@ -21,10 +21,11 @@ function AddFabric({ onFormSubmit }) {
 
   return (
     <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
+      <label htmlFor="fabric-name">Enter Fabric:</label>
       <input {...register("name", { required: true })} className="input" />
 
       {errors.name && <span>This field is required</span>}
-
+    
       <input type="submit" className="submit" />
     </form>
   );

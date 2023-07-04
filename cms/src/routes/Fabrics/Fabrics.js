@@ -18,12 +18,18 @@ function Fabrics() {
   return (
     <>
       <Header />
-      <div className="add-fabric">
-        <AddFabric onFormSubmit={onFormSubmit} />
-      </div>
-      <div className="fabric-list">
-        <FabricList fabrics={fabrics?.fabric} />
-      </div>
+      <main>
+        <section>
+          <div className="fabric-list">
+            <FabricList fabrics={fabrics?.fabric} />
+          </div>
+        </section>
+        <aside>
+          <div className="add-fabric">
+            <AddFabric onFormSubmit={onFormSubmit} />
+          </div>
+          </aside>
+      </main>
     </>
   );
 }

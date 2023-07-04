@@ -1,7 +1,14 @@
 form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: stretch;
     gap: 1em;
+    width: 100%;
+
+    & > label {
+        font-weight: bold;
+        margin-top: 1em;
+    }
 
     & > span {
         color: red;
@@ -9,8 +16,9 @@ form {
 
     & > .input {
         border-radius: 65px;
-        padding: .5em 1em;
-        width: 50%;
+        padding: 0.5em 1em;
+        width: 100%;
+        justify-content: stretch;
     }
 
     & > .submit {

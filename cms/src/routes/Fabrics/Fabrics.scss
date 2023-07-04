@@ -1,9 +1,39 @@
-.fabric-list {
-    padding: 1em 2em;
-    height: 80vh;
-    overflow-y: scroll;
-}
+main {
+    display: flex;
 
-.add-fabric {
-    padding: 1em 2em;
+    & > section {
+        min-width: 75%;
+
+        & > .fabric-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            padding: 1em 2em;
+            height: 90vh;
+            overflow-y: scroll;
+
+            & > .search {
+                display: flex;
+                gap: 1em;
+
+                & > input {
+                    border-radius: 65px;
+                    padding: 0.5em 1em;
+                    width: 25%;
+                }
+            }
+        }
+
+        & > .add-fabric {
+            padding: 1em 2em;
+        }
+    }
+
+    & > aside {
+        width: 100%;
+        display: flex;
+        padding: 1em;
+        flex-direction: column;
+        justify-content: stretch;
+    }
 }
