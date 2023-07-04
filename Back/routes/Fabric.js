@@ -1,5 +1,9 @@
 const express = require("express");
-const { getAllFabrics, insertFabric } = require("../controller/Fabric");
+const {
+  getAllFabrics,
+  insertFabric,
+  searchFabrics,
+} = require("../controller/Fabric");
 const router = express.Router();
 
 router.route("/").get(getAllFabrics).post(insertFabric);
@@ -13,5 +17,7 @@ router
   .delete((req, res) => {
     res.status(200).json({ message: "Deleted" });
   });
+
+router.route("/search/:query").get(searchFabrics);
 
 module.exports = router;

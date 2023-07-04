@@ -1,16 +1,42 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./FabricList.scss";
-import useFetch from "../../../hooks/useFetch";
+import { fetchFabric, searchFabric } from "../../../services/FabricService";
+import {
+  useSearchText,
+  useSearchTextUpdate,
+} from "../../../contexts/SearchContext";
 
 function FabricList({ fabrics }) {
-  const handleSearchBox = async (id, userId) => {
-    const fabrics = useFetch("http://localhost:3000/fabric");
+  const searchText = useSearchText();
+  const [inputValue, setInputValue] = useState(searchText);
+  const updateContextSearchText = useSearchTextUpdate();
+
+  useEffect(() => {
+    const debounceTimer = setTimeout(() => {
+      // Perform the expensive operation here, e.g., API request
+      fetchData();
+    }, 500); // Delay of 500 milliseconds
+
+    return () => clearTimeout(debounceTimer); // Clear the timeout on component unmount or re-render
+  }, [inputValue]); // Only run the effect when `inputValue` changes
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const fetchData = async () => {
+    updateContextSearchText(inputValue);
   };
 
   return (
     <>
       <div className="search">
-        <input type="text" />
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleChange}
+          placeholder="Type something..."
+        />
       </div>
       <table>
         <thead>

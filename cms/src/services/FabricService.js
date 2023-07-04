@@ -5,4 +5,11 @@ const insertFabric = async (fabric) => {
   return response.data.fabric;
 };
 
-export { insertFabric };
+const searchFabric = async (searchText) => {
+  const response = await axios.post("http://localhost:3000/fabric/search", {
+    name: searchText,
+  });
+  return response.data.fabric;
+};
+
+export { insertFabric, searchFabric };
