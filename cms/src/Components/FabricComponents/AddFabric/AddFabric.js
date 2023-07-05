@@ -15,7 +15,9 @@ function AddFabric({ onFormSubmit }) {
   const onSubmit = async (data) => {
     reset({ name: "" });
     const newFabric = await insertFabric(data);
-    console.log(newFabric.id);
+    if (newFabric.message) {
+      alert(newFabric.message);
+    }
     onFormSubmit(newFabric);
   };
 
@@ -25,7 +27,7 @@ function AddFabric({ onFormSubmit }) {
       <input {...register("name", { required: true })} className="input" />
 
       {errors.name && <span>This field is required</span>}
-    
+
       <input type="submit" className="submit" />
     </form>
   );

@@ -20,7 +20,6 @@ function Fabrics() {
   const [fabrics, setFabric] = useFetch(url);
 
   const onFormSubmit = (fabric) => {
-    console.log(fabric, fabrics);
     const newFabric = { ...fabrics };
     newFabric.fabric.push(fabric);
     setFabric(newFabric);

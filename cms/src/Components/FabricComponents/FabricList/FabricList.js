@@ -47,8 +47,8 @@ function FabricList({ fabrics }) {
           </tr>
         </thead>
         <tbody>
-          {fabrics?.map((fabric) => (
-            <tr>
+          {fabrics?.map((fabric, i) => (
+            <tr key={i}>
               <td>{fabric.name}</td>
               <td>
                 <a href="#">Edit</a>

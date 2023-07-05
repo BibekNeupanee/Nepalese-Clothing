@@ -15,7 +15,19 @@ exports.searchFabrics = async (req, res) => {
 
 exports.insertFabric = async (req, res) => {
   const { name } = req.body;
-  const fabric = await Fabric.create({ name });
-  console.log(fabric);
-  return res.status(200).json({ fabric });
+  try {
+    const fabric = await Fabric.create({ name });
+    return res.status(200).json({ fabric, message: "Insert Successful" });
+  } catch (e) {
+    if (e.errors) {
+      return res.status(500).json({ message: e.errors[0].message });
+    }
+    return res.status(500).json({ message: e.errors[0].message });
+  }
+};
+
+exports.deleteFabric = async (req, res) => {
+  const id = req.params.id;
+  await Fabric.destroy({ where: { id } });
+  return res.send(200);
 };
