@@ -13,12 +13,11 @@ function AddFabric({ onFormSubmit }) {
   } = useForm();
 
   const onSubmit = async (data) => {
-    reset({ name: "" });
     const newFabric = await insertFabric(data);
     if (newFabric.message) {
       alert(newFabric.message);
-    }
-    onFormSubmit(newFabric);
+    } else onFormSubmit(newFabric);
+    reset({ name: "" });
   };
 
   return (
