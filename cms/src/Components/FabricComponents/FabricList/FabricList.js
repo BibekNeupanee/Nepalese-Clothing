@@ -1,6 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "./FabricList.scss";
-import { fetchFabric, searchFabric } from "../../../services/FabricService";
+import {
+  deleteFabric,
+  fetchFabric,
+  searchFabric,
+} from "../../../services/FabricService";
 import {
   useSearchText,
   useSearchTextUpdate,
@@ -28,6 +32,11 @@ function FabricList({ fabrics }) {
     updateContextSearchText(inputValue);
   };
 
+  const deleteBtn = async (id) => {
+    const deleteMessage = await deleteFabric(id);
+    alert(deleteMessage);
+  };
+
   return (
     <>
       <div className="search">
@@ -51,10 +60,16 @@ function FabricList({ fabrics }) {
             <tr key={i}>
               <td>{fabric.name}</td>
               <td>
-                <a href="#">Edit</a>
+                <button className="btn">Edit</button>
               </td>
               <td>
-                <a href="#">Delete</a>
+                <button
+                  className="btn"
+                  title="Delete"
+                  onClick={(_) => deleteBtn(fabric.id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}

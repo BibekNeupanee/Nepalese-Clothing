@@ -16,4 +16,9 @@ const searchFabric = async (searchText) => {
   return response.data.fabric;
 };
 
-export { insertFabric, searchFabric };
+const deleteFabric = async (id) => {
+  const response = await axios.delete(`http://localhost:3000/fabric/${id}`);
+  return response.data.message;
+};
+
+export { insertFabric, searchFabric, deleteFabric };

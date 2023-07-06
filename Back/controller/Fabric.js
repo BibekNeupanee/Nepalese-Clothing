@@ -22,12 +22,16 @@ exports.insertFabric = async (req, res) => {
     if (e.errors) {
       return res.status(500).json({ message: e.errors[0].message });
     }
-    return res.status(500).json({ message: e.errors[0].message });
+    return res.status(500).json({ message: "Server Error" });
   }
 };
 
 exports.deleteFabric = async (req, res) => {
-  const id = req.params.id;
-  await Fabric.destroy({ where: { id } });
-  return res.send(200);
+  try {
+    const id = req.params.id;
+    await Fabric.destroy({ where: { id } });
+    return res.status(200).json({ message: "Delete Sucessful" });
+  } catch (e) {
+    return res.status(500).json({ message: "ServerError" });
+  }
 };
